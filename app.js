@@ -12,7 +12,7 @@ const tripId         = 101;
 let tripName         = "MLA Conference";
 const tripCurrency   = "USD";
 let isGroupTrip      = false;
-let participantCount = 1;
+let participantCount = 3;
 let endDate;
 let tripNotes        = null;
 
@@ -49,3 +49,29 @@ console.log(`Trip: ${tripName}`);
 console.log(`Group trip: ${isGroupTrip}`);
 console.log(`Participants: ${participantCount}`);
 console.log(`Expense: ${expenseDescription} - ${expenseAmount} ${tripCurrency}`);
+
+const totalExpenses = expenseAmount + secondExpenseAmount;
+const costPerPerson = totalExpenses / participantCount;
+
+console.log(`Total: ${totalExpenses} ${tripCurrency}`);
+console.log(`Per person: ${costPerPerson} ${tripCurrency}`);
+
+const tipRate = 0.20;
+const tipAmount = expenseAmount * tipRate;
+
+const canSplitExpense = isGroupTrip && participantCount > 1;
+const tripType = participantCount > 1 ? "Group Trip" : "Solo Trip";
+
+let tip = 0;
+
+console.log(tip || 20);
+console.log(tip ?? 20);
+
+document.getElementById("total").textContent =
+ `Total expenses: ${totalExpenses} ${tripCurrency}`;
+document.getElementById("perPerson").textContent =
+ `Cost per person: ${costPerPerson.toFixed(2)} ${tripCurrency}`;
+document.getElementById("tripType").textContent =
+ `Trip type: ${tripType}`;
+document.getElementById("splitStatus").textContent =
+ `Expenses can be split: ${canSplitExpense ? "Yes" : "No"}`;
