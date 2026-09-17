@@ -49,10 +49,3 @@ console.log(`Trip: ${tripName}`);
 console.log(`Group trip: ${isGroupTrip}`);
 console.log(`Participants: ${participantCount}`);
 console.log(`Expense: ${expenseDescription} - ${expenseAmount} ${tripCurrency}`);
-
-git status
-git add .
-git commit -m "Copmlete PPA 2 types and variables"
-git tag ppa2
-git push
-git push origin ppa2
