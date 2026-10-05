@@ -21,7 +21,7 @@ let expenseDescription = "Dinner";
 let expenseAmount      = 84.50;
 let paidByUser         = "Emelie";
 let splitMethod        = "equal";
-let isReimbursable     = false;
+let isReimbursable     = true;
 
 console.log(`${expenseDescription}: ${expenseAmount} ${tripCurrency}, paid by ${paidByUser}`);
 
@@ -56,22 +56,35 @@ const costPerPerson = totalExpenses / participantCount;
 console.log(`Total: ${totalExpenses} ${tripCurrency}`);
 console.log(`Per person: ${costPerPerson} ${tripCurrency}`);
 
-const tipRate = 0.20;
+const tipRate   = 0.20;
 const tipAmount = expenseAmount * tipRate;
 
 const canSplitExpense = isGroupTrip && participantCount > 1;
-const tripType = participantCount > 1 ? "Group Trip" : "Solo Trip";
+const tripType        = participantCount > 1 ? "Group Trip" : "Solo Trip";
 
 let tip = 0;
 
 console.log(tip || 20);
 console.log(tip ?? 20);
 
-document.getElementById("total").textContent =
- `Total expenses: ${totalExpenses} ${tripCurrency}`;
-document.getElementById("perPerson").textContent =
- `Cost per person: ${costPerPerson.toFixed(2)} ${tripCurrency}`;
-document.getElementById("tripType").textContent =
- `Trip type: ${tripType}`;
-document.getElementById("splitStatus").textContent =
- `Expenses can be split: ${canSplitExpense ? "Yes" : "No"}`;
+document.getElementById("total").textContent       = `Total expenses: ${totalExpenses} ${tripCurrency}`;
+document.getElementById("perPerson").textContent   =`Cost per person: ${costPerPerson.toFixed(2)} ${tripCurrency}`;
+document.getElementById("tripType").textContent    = `Trip type: ${tripType}`;
+document.getElementById("splitStatus").textContent =`Expenses can be split: ${canSplitExpense ? "Yes" : "No"}`;
+
+const exchangeRates = {
+  USD: 1,
+  CAD: 0.72
+};
+
+const fs  = import("fs");
+
+fs.createReadStream("travel-expenses-raw.csv")
+  .pipe(csv())
+  .on("data", (row) => {
+    const total = Number(row.trip_total);
+    const currency = row.currency?.toUpperCase();
+    const exchangeRate = exchangeRates[currency] || 1;
+    const totalInUSD = total * exchangeRate;
+    console.log(`Trip: ${row.trip_name}, Total in USD: ${totalInUSD.toFixed(2)}`);
+  });

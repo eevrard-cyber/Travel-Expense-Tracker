@@ -1,0 +1,146 @@
+date,destination,purpose,totalCad,totalUsd,costCategory
+2026-02-08,Vancouver,Conference,2204.23,1587.05,high
+2026-03-15,Montreal,Workshop,1419.52,1022.05,medium
+2026-04-22,Toronto,Conference,793.4,571.25,medium
+2026-05-02,Toronto,Workshop,732.42,527.34,medium
+2026-06-09,Halifax,Training,1503.56,1082.56,medium
+2026-07-16,Ottawa,Conference,2457.13,1769.13,high
+2026-08-23,Vancouver,Research,1167.97,840.94,medium
+2026-01-03,Vancouver,Training,3068.22,2209.12,high
+2026-02-10,Quebec City,Conference,405.66,292.08,low
+2026-03-17,Montreal,Meeting,2730.28,1965.80,high
+2026-04-24,Ottawa,Conference,2367.57,1704.65,high
+2026-05-04,Montreal,Research,362.7,261.14,low
+2026-06-11,Ottawa,Workshop,2847.19,2049.98,high
+2026-07-18,Quebec City,Workshop,712.25,512.82,medium
+2026-08-25,Montreal,Conference,2156.69,1552.82,high
+2026-01-05,Ottawa,Conference,2754.38,1983.15,high
+2026-02-12,Montreal,Research,976.16,702.84,medium
+2026-03-19,Quebec City,Training,1260.16,907.32,medium
+2026-04-26,Calgary,Meeting,2281.61,1642.76,high
+2026-05-06,Montreal,Workshop,2075.73,1494.53,medium
+2026-06-13,Calgary,Training,1543.76,1111.51,medium
+2026-07-20,Ottawa,Workshop,796.41,573.42,medium
+2026-01-07,Toronto,Meeting,1355.59,976.02,medium
+2026-02-14,Montreal,Training,2932.46,2111.37,high
+2026-03-21,Quebec City,Training,2138.75,1539.90,high
+2026-04-01,Halifax,Research,560.04,403.23,low
+2026-05-08,Vancouver,Training,2414.57,1738.49,high
+2026-06-15,Ottawa,Workshop,1439.58,1036.50,medium
+2026-07-22,Halifax,Meeting,795.51,572.77,medium
+2026-01-09,Montreal,Training,2052.53,1477.82,medium
+2026-02-16,Halifax,Workshop,315.67,227.28,low
+2026-03-23,Halifax,Workshop,3188.05,2295.40,high
+2026-04-03,Ottawa,Workshop,2771.2,1995.26,high
+2026-05-10,Toronto,Conference,2219.67,1598.16,high
+2026-06-17,Ottawa,Meeting,463.58,333.78,low
+2026-07-24,Halifax,Training,1517.47,1092.58,medium
+2026-08-04,Ottawa,Workshop,2466.84,1776.12,high
+2026-01-11,Montreal,Meeting,2712.34,1952.88,high
+2026-02-18,Calgary,Training,1271.65,915.59,medium
+2026-03-25,Vancouver,Workshop,3056.78,2200.88,high
+2026-04-05,Toronto,Workshop,1118.4,805.25,medium
+2026-05-12,Toronto,Conference,2981.62,2146.77,high
+2026-06-19,Ottawa,Training,298.41,214.86,low
+2026-01-13,Vancouver,Research,3036.29,2186.13,high
+2026-02-20,Vancouver,Meeting,1745.24,1256.57,medium
+2026-03-27,Halifax,Training,2981.05,2146.36,high
+2026-04-07,Calgary,Meeting,1348.9,971.21,medium
+2026-05-14,Quebec City,Research,2890.81,2081.38,high
+2026-06-21,Winnipeg,Conference,883.55,636.16,medium
+2026-07-01,Montreal,Meeting,184.79,133.05,low
+2026-08-08,Calgary,Workshop,798.27,574.75,medium
+2026-01-15,Montreal,Conference,825.14,594.10,medium
+2026-02-22,Toronto,Meeting,338.24,243.53,low
+2026-03-02,Calgary,Meeting,2180.45,1569.92,high
+2026-04-09,Calgary,Workshop,527.52,379.81,low
+2026-05-16,Winnipeg,Training,2536.63,1826.37,high
+2026-06-23,Halifax,Training,410.52,295.57,low
+2026-08-10,Toronto,Conference,306.69,220.82,low
+2026-01-17,Quebec City,Conference,885.86,637.82,medium
+2026-02-24,Calgary,Workshop,1501.73,1081.25,medium
+2026-03-04,Halifax,Training,977.92,704.10,medium
+2026-04-11,Calgary,Conference,1484.84,1069.08,medium
+2026-05-18,Montreal,Conference,2128.61,1532.60,high
+2026-07-05,Calgary,Training,1371.76,987.67,medium
+2026-08-12,Winnipeg,Training,2783.12,2003.85,high
+2026-01-19,Toronto,Training,1287.24,926.81,medium
+2026-02-26,Halifax,Meeting,2973.68,2141.05,high
+2026-03-06,Winnipeg,Meeting,1422.86,1024.46,medium
+2026-04-13,Winnipeg,Training,704.89,507.52,medium
+2026-05-20,Calgary,Conference,1903.88,1370.79,medium
+2026-06-27,Toronto,Meeting,296.07,213.17,low
+2026-07-07,Winnipeg,Workshop,2951.71,2125.23,high
+2026-08-14,Vancouver,Conference,3079.2,2217.02,high
+2026-01-21,Montreal,Training,331.05,238.36,low
+2026-02-01,Montreal,Training,1363.63,981.81,medium
+2026-03-08,Calgary,Workshop,1951.12,1404.81,medium
+2026-04-15,Montreal,Research,2144.71,1544.19,high
+2026-05-22,Quebec City,Meeting,749.12,539.37,medium
+2026-06-02,Quebec City,Training,938.09,675.42,medium
+2026-07-09,Vancouver,Meeting,1528.25,1100.34,medium
+2026-08-16,Montreal,Conference,1531.52,1102.69,medium
+2026-01-23,Montreal,Conference,1775.91,1278.66,medium
+2026-02-03,Ottawa,Training,2994.44,2156.00,high
+2026-03-10,Montreal,Training,1258.14,905.86,medium
+2026-04-17,Vancouver,Research,2687.93,1935.31,high
+2026-08-18,Montreal,Workshop,598.78,431.12,low
+2026-01-25,Ottawa,Workshop,768.74,553.49,medium
+2026-02-05,Quebec City,Training,2237.49,1610.99,high
+2026-03-12,Ottawa,Workshop,1624.68,1169.77,medium
+2026-04-19,Toronto,Conference,2073.6,1492.99,medium
+2026-05-26,Ottawa,Conference,130.92,94.26,low
+2026-06-06,Vancouver,Meeting,617.67,444.72,low
+2026-07-13,Winnipeg,Workshop,2293.46,1651.29,high
+2026-08-20,Toronto,Conference,351.75,253.26,low
+2026-01-27,Vancouver,Workshop,230.97,166.30,low
+2026-02-07,Quebec City,Workshop,1821.78,1311.68,medium
+2026-03-14,Halifax,Training,248.83,179.16,low
+2026-04-21,Quebec City,Conference,2888.69,2079.86,high
+2026-05-01,Calgary,Training,2174.15,1565.39,high
+2026-06-08,Quebec City,Workshop,2843.13,2047.05,high
+2026-07-15,Halifax,Workshop,2428.39,1748.44,high
+2026-08-22,Calgary,Training,3126.71,2251.23,high
+2026-01-02,Vancouver,Research,196.34,141.36,low
+2026-02-09,Quebec City,Research,2590.88,1865.43,high
+2026-03-16,Calgary,Meeting,610.33,439.44,low
+2026-05-03,Winnipeg,Training,734.68,528.97,medium
+2026-06-10,Winnipeg,Meeting,1059.99,763.19,medium
+2026-07-17,Calgary,Training,192.89,138.88,low
+2026-08-24,Calgary,Research,1131.05,814.36,medium
+2026-01-04,Montreal,Meeting,1201.53,865.10,medium
+2026-02-11,Halifax,Workshop,1139.94,820.76,medium
+2026-03-18,Toronto,Conference,2821.28,2031.32,high
+2026-04-25,Ottawa,Training,1908.22,1373.92,medium
+2026-06-12,Quebec City,Research,1987.12,1430.73,medium
+2026-07-19,Montreal,Research,2890.47,2081.14,high
+2026-08-26,Calgary,Meeting,256.71,184.83,low
+2026-01-06,Halifax,Conference,1721.35,1239.37,medium
+2026-02-13,Calgary,Meeting,1448.4,1042.85,medium
+2026-03-20,Quebec City,Workshop,1086.86,782.54,medium
+2026-04-27,Montreal,Meeting,1681.94,1211.00,medium
+2026-05-07,Halifax,Meeting,1359.39,978.76,medium
+2026-06-14,Ottawa,Workshop,512.05,368.68,low
+2026-07-21,Halifax,Research,2206.14,1588.42,high
+2026-08-01,Vancouver,Workshop,1872.84,1348.44,medium
+2026-01-08,Halifax,Workshop,2687.87,1935.27,high
+2026-02-15,Ottawa,Meeting,767.36,552.50,medium
+2026-04-02,Calgary,Workshop,1577.41,1135.74,medium
+2026-05-09,Vancouver,Conference,994.06,715.72,medium
+2026-07-23,Calgary,Meeting,811.89,584.56,medium
+2026-08-03,Calgary,Training,195.23,140.57,low
+2026-01-10,Calgary,Research,2002.72,1441.96,medium
+2026-02-17,Montreal,Research,1396.48,1005.47,medium
+2026-03-24,Calgary,Research,1642.68,1182.73,medium
+2026-04-04,Calgary,Training,2140.66,1541.28,high
+2026-05-11,Toronto,Conference,2517.53,1812.62,high
+2026-06-18,Calgary,Training,2596.66,1869.60,high
+2026-07-25,Winnipeg,Conference,1836.81,1322.50,medium
+2026-08-05,Montreal,Research,530.68,382.09,low
+2026-01-12,Winnipeg,Workshop,3162.71,2277.15,high
+2026-02-19,Quebec City,Research,2006.97,1445.02,medium
+2026-03-26,Halifax,Workshop,1493.41,1075.26,medium
+2026-05-13,Ottawa,Workshop,1612.56,1161.04,medium
+2026-06-20,Calgary,Meeting,1474.81,1061.86,medium
+2026-07-27,Ottawa,Training,956.88,688.95,medium
+2026-08-07,Quebec City,Workshop,368.18,265.09,low
