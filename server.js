@@ -20,8 +20,7 @@ if (Number.isNaN(cadToUsd)) {
 
 let validCount = 0;
 let rejectedCount = 0;
-let cleanCsv =
-  "date,destination,purpose,total_cad,total_usd,cost_category\n";
+let cleanCsv = "date,destination,purpose,totalCad,totalUsd,costCategory\n";
 
 for (let i = 1; i < lines.length; i++) {
   const line = lines[i].trim();
@@ -30,41 +29,45 @@ for (let i = 1; i < lines.length; i++) {
     continue;
   }
 
+const columns = line.split(",");
+
 const expense = {
-  date: columns[0].trim(),
+  date:        columns[0].trim(),
   destination: columns[1].trim(),
-  purpose: columns[2].trim(),
-  totalCad: Number(columns[3]),
-  totalUsd: 0,
+  purpose:     columns[2].trim(),
+  totalCad:    Number(columns[3]),
+  totalUsd:    Number(columns[3]) * cadToUsd,
   costCategory: ""
 };
 
-  const columns = line.split(",");
-  const date = columns[0].trim();
-  const destination = columns[1].trim();
-  const purpose = columns[2].trim();
-  const totalCad = Number(columns[3]);
-
-  if (destination === "" || 
-    Number.isNaN(expense.totalCad) || totalCad <= 0) {
+  if (expense.destination === "" || 
+    Number.isNaN(expense.totalCad) || 
+    expense.totalCad <= 0) 
+    {
     rejectedCount++;
     continue;
   }
 
-  const totalUsd = totalCad * cadToUsd;
-  let costCategory;
+  expense.totalUsd = expense.totalCad * cadToUsd;
 
-  if (totalUsd < 500) {
-    costCategory = "low";
-  } else if (totalUsd < 1500) {
-    costCategory = "medium";
+  if (expense.totalUsd < 500) {
+    expense.costCategory = "low";
+  } else if (expense.totalUsd < 1500) {
+    expense.costCategory = "medium";
   } else {
-    costCategory = "high";
+    expense.costCategory = "high";
   }
 
+const fieldName = "destination";
+console.log(expense.destination);
+console.log(expense[fieldName]);
+
   cleanCsv +=
-    `${date},${destination},${purpose},${totalCad},` +
-    `${totalUsd.toFixed(2)},${costCategory}\n`;
+    `${expense.date},${expense.destination},${expense.purpose},` + 
+    `${expense.totalCad},${expense.totalUsd.toFixed(2)},` +
+    `${expense.costCategory}\n`;
+
+console.log(expense);
   validCount++;
 }
 

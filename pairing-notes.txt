@@ -1,0 +1,14 @@
+PPA5 Remote Pairing Log
+Partner 1: Emelie
+Partner 2: Hank
+Partner 3: Alyssa
+Remote tool used: Google meets
+Approximate time working together: 1 hour
+Number of remote sessions: 1
+Driver first: Hank
+Navigator first: Emelie
+Number of role switches: 3
+One decision we discussed together: Role of objects in PPA 5
+One place where the navigator caught a problem or suggested a better approach: 
+    Forgot to add a comma at the end of the totalUsd property in the object, so the code didn't run initially. Found the issue, added the comma, and it was fixed.
+One thing we learned about working remotely as a pair: Relearned how to commit to git.
