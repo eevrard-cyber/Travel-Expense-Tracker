@@ -1,6 +1,40 @@
 import http from "node:http";
 import fs from "node:fs";
 
+class TravelExpense {
+  constructor(date, destination, purpose, totalCad) {
+    this.date        = date;
+    this.destination = destination;
+    this.purpose     = purpose;
+    this.totalCad    = totalCad;
+    this.totalUsd    = 0;
+  }
+
+  convertToUsd(rate) {
+    this.totalUsd = this.totalCad * rate;
+  }
+
+  get costCategory() {
+    if (this.totalUsd < 500)  return "low";
+    if (this.totalUsd < 1000) return "medium";
+    return "high";
+  }
+
+toCsvRow() {
+ return `${this.date},${this.destination},${this.purpose},` +
+ `${this.totalCad},${this.totalUsd.toFixed(2)},${this.costCategory}`;
+}
+
+static fromColumns(columns) {
+    return new TravelExpense(
+      columns[0].trim(),
+      columns[1].trim(),
+      columns[2].trim(),
+      Number(columns[3])
+    );
+  }
+}
+
 // ============================================================
 // 1. READ RAW DATA
 // ============================================================
@@ -19,7 +53,7 @@ if (Number.isNaN(cadToUsd)) {
 // ============================================================
 
 let totalUsd = 0;
-let validCount    = 0;
+let validCount = 0;
 let rejectedCount = 0;
 const expenses = [];
 
@@ -31,38 +65,29 @@ for (let i = 1; i < lines.length; i++) {
   }
 
   const columns = line.split(",");
-  const expense = {
-    date:         columns[0].trim(),
-    destination:  columns[1].trim(),
-    purpose:      columns[2].trim(),
-    totalCad:     Number(columns[3]),
-    totalUsd:     Number(columns[3]) * cadToUsd,
-    costCategory: ""
-  };
+  console.log(columns);
 
-  if (expense.destination === "" ||
+  const expense = TravelExpense.fromColumns(columns);
+
+  if (
+    expense.destination === "" ||
     Number.isNaN(expense.totalCad) ||
-    expense.totalCad <= 0) {
+    expense.totalCad <= 0
+  ) {
     rejectedCount++;
     continue;
   }
 
-  expense.totalUsd = expense.totalCad * cadToUsd;
+  expense.convertToUsd(cadToUsd);
   totalUsd += expense.totalUsd;
-
-  if (expense.totalUsd < 500) {
-    expense.costCategory = "low";
-  } else if (expense.totalUsd < 1500) {
-    expense.costCategory = "medium";
-  } else {
-    expense.costCategory = "high";
-  }
 
   expenses.push(expense);
   validCount++;
 }
 
 console.log(expenses.length);
+console.log(expenses[0]);
+console.log(expenses[0] instanceof TravelExpense);
 
 // ============================================================
 // 3. SAVE CLEAN DATA
@@ -70,15 +95,13 @@ console.log(expenses.length);
 let cleanCSV = "date,destination,purpose,totalCad,totalUsd,costCategory\n";
 
 for (const expense of expenses) {
-  cleanCSV += 
-      `${expense.date},${expense.destination},${expense.purpose},` +
-      `${expense.totalCad},${expense.totalUsd.toFixed(2)}, ${expense.costCategory}\n`;
+  cleanCSV += expense.toCsvRow() + "\n";
 }
 
-const averageUsd =
-  validCount === 0 ? 0 : totalUsd / validCount;
+const averageUsd = validCount === 0 ? 0 : totalUsd / validCount;
 
 fs.writeFileSync("data/travel-expenses-clean.csv", cleanCSV, "utf8");
+
 console.log(`Average USD amount: ${averageUsd.toFixed(2)}`);
 console.log(`Total USD amount: ${totalUsd.toFixed(2)}`);
 
@@ -90,7 +113,7 @@ console.log(highCostExpenses.length);
 
 const highCostDestinations =
  highCostExpenses.map((expense) => {
-  return expense.destination;
+ return expense.destination;
  });
 
 console.log(highCostDestinations);
@@ -100,8 +123,8 @@ console.log(highCostDestinations);
 // 4. SERVE CLEAN DATA
 // ============================================================
 
-const server = http.createServer((req, res) => {
-  const requestUrl = new URL(req.url, "http://localhost:3000");
+const server     = http.createServer((req, res) => {
+const requestUrl = new URL(req.url, "http://localhost:3000");
 
   if (requestUrl.pathname === "/") {
     const html = fs.readFileSync("index.html", "utf8");
@@ -115,7 +138,7 @@ const server = http.createServer((req, res) => {
       .readFileSync("data/travel-expenses-clean.csv", "utf8")
       .split(/\r?\n/);
 
-    let tableRows = "";
+    let tableRows  = "";
     let shownCount = 0;
 
     for (let i = 1; i < cleanLines.length && shownCount < 10; i++) {
@@ -141,13 +164,13 @@ const server = http.createServer((req, res) => {
         <h2>Travel Summary</h2>
         <div class="stats">
           <p><strong>Valid records:</strong> ${validCount}</p>
-          <p><strong>Rejected records:</strong> $${rejectedCount}</p>
-          <p><strong>CAD-to-USD rate:</strong> $${cadToUsd}</p>
+          <p><strong>Rejected records:</strong> ${rejectedCount}</p>
+          <p><strong>CAD-to-USD rate:</strong> ${cadToUsd}</p>
           <p><strong>Total valid expenses:</strong> ${expenses.length}</p>
           <p><strong>Total USD:</strong> $${totalUsd.toFixed(2)}</p>
-          <p><strong>Average USD per expnse: </strong> $${averageUsd.toFixed(2)}</p>
-          <p><strong>High-cose expenses:</strong> ${highCostExpenses.length}</p>
-          <p><strong>High-cost destinations:</strong> ${highCostDestinations.length > 0 ? highCostDestinations.join(", ") : "None"}</p>
+          <p><strong>Average USD per expense: </strong> $${averageUsd.toFixed(2)}</p>
+          <p><strong>High-cost expenses:</strong> ${highCostExpenses.length}</p>
+          <p><strong>High-cost destination names:</strong> ${highCostDestinations.length > 0 ? highCostDestinations.join(", ") : "None"}</p>
         </div>
         <h3>First 10 cleaned records</h3>
         <div class="table-wrapper">
