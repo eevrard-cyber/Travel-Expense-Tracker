@@ -1,17 +1,28 @@
 import http from "node:http";
 import fs from "node:fs";
 
+class CurrencyConverter {
+  constructor(cadToUsd) {
+    this.cadToUsd = cadToUsd;
+  }
+
+  toUsd(cad) {
+    return cad * this.cadToUsd;
+  }
+}
+
 class TravelExpense {
-  constructor(date, destination, purpose, totalCad) {
+  constructor(date, destination, purpose, totalCad, currencyConverter) {
     this.date        = date;
     this.destination = destination;
     this.purpose     = purpose;
     this.totalCad    = totalCad;
     this.totalUsd    = 0;
+    this.currencyConverter = currencyConverter;
   }
 
-  convertToUsd(rate) {
-    this.totalUsd = this.totalCad * rate;
+  convertToUsd() {
+    this.totalUsd = this.currencyConverter.toUsd(this.totalCad);
   }
 
   get costCategory() {
@@ -25,12 +36,13 @@ toCsvRow() {
  `${this.totalCad},${this.totalUsd.toFixed(2)},${this.costCategory}`;
 }
 
-static fromColumns(columns) {
+static fromColumns(columns, currencyConverter) {
     return new TravelExpense(
       columns[0].trim(),
       columns[1].trim(),
       columns[2].trim(),
-      Number(columns[3])
+      Number(columns[3]),
+      currencyConverter
     );
   }
 }
@@ -47,6 +59,8 @@ const cadToUsd = Number(rateText.trim());
 if (Number.isNaN(cadToUsd)) {
   throw new Error("The CAD-to-USD exchange rate is not a number.");
 }
+
+const currencyConverter = new CurrencyConverter(cadToUsd);
 
 // ============================================================
 // 2. CLEAN + WRANGLE
@@ -65,9 +79,8 @@ for (let i = 1; i < lines.length; i++) {
   }
 
   const columns = line.split(",");
+  const expense = TravelExpense.fromColumns(columns, currencyConverter);
   console.log(columns);
-
-  const expense = TravelExpense.fromColumns(columns);
 
   if (
     expense.destination === "" ||
@@ -78,7 +91,7 @@ for (let i = 1; i < lines.length; i++) {
     continue;
   }
 
-  expense.convertToUsd(cadToUsd);
+  expense.convertToUsd();
   totalUsd += expense.totalUsd;
 
   expenses.push(expense);
