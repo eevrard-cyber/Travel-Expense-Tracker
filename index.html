@@ -77,6 +77,129 @@
   </head>
   <body>
     <h1>Travel Expense Tracker</h1>
+    <section>
+  <h2>Browse Expenses</h2>
+
+  <label for="expenseDate">Date</label>
+  <input type="date" id="expenseDate">
+  <button id="readDate">Read Date</button>
+  <p id="selectedDate"></p>
+
+  <label for="destinationFilter">Destination</label>
+  <select id="destinationFilter">
+    <option value="all">All Destinations</option>
+  </select>
+
+  <label for="categoryFilter">Category</label>
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  <label for="sortBy">Sort by</label>
+  <select id="sortBy">
+    <option value="date">Date</option>
+    <option value="usd">USD amount</option>
+  </select>
+
+  <table id="expenseTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Destination</th>
+        <th>Purpose</th>
+        <th>USD</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+<script>
+  const dateInput = document.querySelector("#expenseDate");
+  const selectedDate = document.querySelector("#selectedDate");
+
+  document.querySelector("#readDate").addEventListener("click", () => {
+    selectedDate.textContent = dateInput.value;
+  });
+
+  const destinationFilter =
+    document.querySelector("#destinationFilter");
+  const categoryFilter =
+    document.querySelector("#categoryFilter");
+  const sortBy = document.querySelector("#sortBy");
+
+  let expenses = [];
+
+  function renderExpenses(expensesToShow) {
+    const body = document.querySelector("#expenseTable tbody");
+    body.innerHTML = "";
+
+    for (const expense of expensesToShow) {
+      const row = document.createElement("tr");
+
+      const values = [
+        expense.date,
+        expense.destination,
+        expense.purpose,
+        `$${Number(expense.totalUsd).toFixed(2)}`,
+        expense.costCategory
+      ];
+
+      for (const value of values) {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        row.appendChild(cell);
+      }
+
+      body.appendChild(row);
+    }
+  }
+
+  function updateTable() {
+    const destination = destinationFilter.value;
+    const category = categoryFilter.value;
+
+    const visibleExpenses = expenses.filter((expense) => {
+      const matchesDestination =
+        destination === "all" || expense.destination === destination;
+      const matchesCategory =
+        category === "all" || expense.costCategory === category;
+
+      return matchesDestination && matchesCategory;
+    });
+
+    visibleExpenses.sort((a, b) => {
+      if (sortBy.value === "usd") {
+        return a.totalUsd - b.totalUsd;
+      }
+      return a.date.localeCompare(b.date);
+    });
+
+    renderExpenses(visibleExpenses);
+  }
+
+  fetch("/api/expenses")
+    .then((response) => response.json())
+    .then((data) => {
+      expenses = data.expenses;
+
+      for (const destination of data.destinations) {
+        const option = document.createElement("option");
+        option.value = destination;
+        option.textContent = destination;
+        destinationFilter.appendChild(option);
+      }
+
+      updateTable();
+    });
+
+  destinationFilter.addEventListener("change", updateTable);
+  categoryFilter.addEventListener("change", updateTable);
+  sortBy.addEventListener("change", updateTable);
+</script>
     <div id="summary"><p>Loading travel summary...</p></div>
 
     <script type="module">

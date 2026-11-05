@@ -102,6 +102,52 @@ console.log(expenses.length);
 console.log(expenses[0]);
 console.log(expenses[0] instanceof TravelExpense);
 
+const uniqueDestinations = new Set();
+
+for (const expense of expenses) {
+  uniqueDestinations.add(expense.destination);
+}
+
+console.log(uniqueDestinations);
+console.log(uniqueDestinations.size);
+
+const totalsByDestination = new Map();
+
+for (const expense of expenses) {
+  const destination  = expense.destination;
+  const currentTotal = totalsByDestination.get(destination) ?? 0;
+
+  totalsByDestination.set(destination, currentTotal + expense.totalUsd);
+}
+
+console.log(totalsByDestination);
+
+const codePattern = /^TRIP-\d{4}$/;
+
+console.log(codePattern.test("TRIP-0042"));
+console.log(codePattern.test("trip-0042"));
+console.log(codePattern.test("TRIP-42"));
+console.log(codePattern.test("XTRIP-0042"));
+
+const expenseIdPattern = /^EXP-\d{4}-\d{4}$/;
+
+console.log(expenseIdPattern.test("EXP-2026-0042"));
+console.log(expenseIdPattern.test("XEXP-2026-0042"));
+console.log(expenseIdPattern.test("EXP-26-42"));
+
+const amountPattern = /^\d+\.\d{2}$/;
+
+console.log(amountPattern.test("123.45"));
+console.log(amountPattern.test("123x45"));
+console.log(amountPattern.test("123.4"));
+
+
+const jsonText = JSON.stringify(expenses, null, 2);
+const restored = JSON.parse(jsonText);
+
+console.log(typeof jsonText);
+console.log(restored);
+
 // ============================================================
 // 3. SAVE CLEAN DATA
 // ============================================================
@@ -145,6 +191,25 @@ const requestUrl = new URL(req.url, "http://localhost:3000");
     res.end(html);
     return;
   }
+
+if (requestUrl.pathname === "/api/expenses") {
+  const browserExpenses = expenses.map((expense) => ({
+    date:         expense.date,
+    destination:  expense.destination,
+    purpose:      expense.purpose,
+    totalUsd:     expense.totalUsd,
+    costCategory: expense.costCategory
+  }));
+
+  res.writeHead(200, {
+    "Content-Type": "application/json; charset=utf-8"
+  });
+  res.end(JSON.stringify({
+    expenses:     browserExpenses,
+    destinations: [...uniqueDestinations]
+  }));
+  return;
+}
 
   if (requestUrl.pathname === "/summary") {
     const cleanLines = fs
