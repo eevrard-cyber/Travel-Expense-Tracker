@@ -1,5 +1,60 @@
 import http from "node:http";
 import fs from "node:fs";
+import { TravelExpense } from "./modules/travel-expense.js";
+import { loadExpenses, saveExpenses } from "./modules/expense-store.js"; // PPA9
+
+if (req.method === "POST" && requestUrl.pathname === "/api/expenses") {
+  let body = "";
+
+  req.on("data", (chunk) => {
+    body += chunk;
+  });
+
+  req.on("end", () => {
+    try {
+      const submitted = JSON.parse(body);
+      const totalUsd = Number(submitted.totalUsd);
+
+      const isValid =
+        typeof submitted.date === "string" &&
+        submitted.date.trim() !== "" &&
+        typeof submitted.destination === "string" &&
+        submitted.destination.trim() !== "" &&
+        typeof submitted.purpose === "string" &&
+        submitted.purpose.trim() !== "" &&
+        Number.isFinite(totalUsd) &&
+        totalUsd > 0;
+
+      if (!isValid) {
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "Please enter a date, destination, purpose, and positive USD amount." }));
+        return;
+      }
+
+      const expenses = loadExpenses();
+      const id = Math.max(0, ...expenses.map((expense) => expense.id)) + 1;
+
+      const newExpense = new TravelExpense(
+        id,
+        submitted.date,
+        submitted.destination.trim(),
+        submitted.purpose.trim(),
+        totalUsd
+      );
+
+      expenses.push(newExpense);
+      saveExpenses(expenses);
+
+      res.writeHead(201, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(newExpense));
+    } catch {
+      res.writeHead(400, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ error: "The submitted data was not valid JSON." }));
+    }
+  });
+
+  return;
+}
 
 class CurrencyConverter {
   constructor(cadToUsd) {
@@ -182,34 +237,26 @@ console.log(highCostDestinations);
 // 4. SERVE CLEAN DATA
 // ============================================================
 
-const server     = http.createServer((req, res) => {
-const requestUrl = new URL(req.url, "http://localhost:3000");
+const server = http.createServer((req, res) => {
+  const requestUrl = new URL(req.url, "http://localhost:3000");
 
   if (requestUrl.pathname === "/") {
-    const html = fs.readFileSync("index.html", "utf8");
+    const html = fs.readFileSync("public/index.html", "utf8");
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(html);
     return;
   }
 
-if (requestUrl.pathname === "/api/expenses") {
-  const browserExpenses = expenses.map((expense) => ({
-    date:         expense.date,
-    destination:  expense.destination,
-    purpose:      expense.purpose,
-    totalUsd:     expense.totalUsd,
-    costCategory: expense.costCategory
-  }));
+  if (req.method === "GET" && requestUrl.pathname === "/api/expenses") {
+    const savedExpenses = loadExpenses();
 
-  res.writeHead(200, {
-    "Content-Type": "application/json; charset=utf-8"
-  });
-  res.end(JSON.stringify({
-    expenses:     browserExpenses,
-    destinations: [...uniqueDestinations]
-  }));
-  return;
-}
+    res.writeHead(200, {
+      "Content-Type": "application/json"
+    });
+
+    res.end(JSON.stringify(savedExpenses));
+    return;
+  }
 
   if (requestUrl.pathname === "/summary") {
     const cleanLines = fs

@@ -80,6 +80,22 @@
     <section>
   <h2>Browse Expenses</h2>
 
+  <form id="expenseForm">
+  <label for="newExpenseDate">Expense date</label>
+  <input type="date" id="newExpenseDate" required>
+
+  <label for="newDestination">Destination</label>
+  <input type="text" id="newDestination" required>
+
+  <label for="newPurpose">Purpose</label>
+  <input type="text" id="newPurpose" required>
+
+  <label for="newAmountUsd">Amount in USD</label>
+  <input type="number" id="newAmountUsd" min="0.01" step="0.01" required>
+
+  <button type="submit">Add Expense</button>
+</form>
+
   <label for="expenseDate">Date</label>
   <input type="date" id="expenseDate">
   <button id="readDate">Read Date</button>
@@ -181,20 +197,61 @@
     renderExpenses(visibleExpenses);
   }
 
-  fetch("/api/expenses")
-    .then((response) => response.json())
-    .then((data) => {
-      expenses = data.expenses;
+  async function loadExpenses() {
+  const response = await fetch("/api/expenses");
+  const savedExpenses = await response.json();
 
-      for (const destination of data.destinations) {
-        const option = document.createElement("option");
-        option.value = destination;
-        option.textContent = destination;
-        destinationFilter.appendChild(option);
-      }
+  expenses = savedExpenses.map((expense) => ({
+    ...expense,
+    costCategory:
+      expense.totalUsd < 500 ? "low" :
+      expense.totalUsd < 1000 ? "medium" :
+      "high"
+  }));
 
-      updateTable();
-    });
+  destinationFilter.innerHTML =
+    '<option value="all">All Destinations</option>';
+
+  const destinations = new Set(
+    expenses.map((expense) => expense.destination)
+  );
+
+  for (const destination of destinations) {
+    const option = document.createElement("option");
+    option.value = destination;
+    option.textContent = destination;
+    destinationFilter.appendChild(option);
+  }
+
+  updateTable();
+}
+
+loadExpenses();
+
+document.querySelector("#expenseForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const newExpense = {
+    date: document.querySelector("#newExpenseDate").value,
+    destination: document.querySelector("#newDestination").value.trim(),
+    purpose: document.querySelector("#newPurpose").value.trim(),
+    totalUsd: Number(document.querySelector("#newAmountUsd").value)
+  };
+
+  const response = await fetch("/api/expenses", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newExpense)
+  });
+
+  if (response.ok) {
+    event.target.reset();
+    await loadExpenses();
+  } else {
+    const result = await response.json();
+    alert(result.error);
+  }
+}); // PPA9 sends new expense to server and reloads expenses
 
   destinationFilter.addEventListener("change", updateTable);
   categoryFilter.addEventListener("change", updateTable);

@@ -1,0 +1,1017 @@
+[
+  {
+    "id": 1,
+    "date": "2026-02-08",
+    "destination": "Vancouver",
+    "purpose": "Conference",
+    "totalUsd": 1587.0456
+  },
+  {
+    "id": 2,
+    "date": "2026-03-15",
+    "destination": "Montreal",
+    "purpose": "Workshop",
+    "totalUsd": 1022.0544
+  },
+  {
+    "id": 3,
+    "date": "2026-04-22",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 571.2479999999999
+  },
+  {
+    "id": 4,
+    "date": "2026-05-02",
+    "destination": "Toronto",
+    "purpose": "Workshop",
+    "totalUsd": 527.3424
+  },
+  {
+    "id": 5,
+    "date": "2026-06-09",
+    "destination": "Halifax",
+    "purpose": "Training",
+    "totalUsd": 1082.5631999999998
+  },
+  {
+    "id": 6,
+    "date": "2026-07-16",
+    "destination": "Ottawa",
+    "purpose": "Conference",
+    "totalUsd": 1769.1336000000001
+  },
+  {
+    "id": 7,
+    "date": "2026-08-23",
+    "destination": "Vancouver",
+    "purpose": "Research",
+    "totalUsd": 840.9384
+  },
+  {
+    "id": 8,
+    "date": "2026-01-03",
+    "destination": "Vancouver",
+    "purpose": "Training",
+    "totalUsd": 2209.1184
+  },
+  {
+    "id": 9,
+    "date": "2026-02-10",
+    "destination": "Quebec City",
+    "purpose": "Conference",
+    "totalUsd": 292.0752
+  },
+  {
+    "id": 10,
+    "date": "2026-03-17",
+    "destination": "Montreal",
+    "purpose": "Meeting",
+    "totalUsd": 1965.8016
+  },
+  {
+    "id": 11,
+    "date": "2026-04-24",
+    "destination": "Ottawa",
+    "purpose": "Conference",
+    "totalUsd": 1704.6504
+  },
+  {
+    "id": 12,
+    "date": "2026-05-04",
+    "destination": "Montreal",
+    "purpose": "Research",
+    "totalUsd": 261.144
+  },
+  {
+    "id": 13,
+    "date": "2026-06-11",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 2049.9768
+  },
+  {
+    "id": 14,
+    "date": "2026-07-18",
+    "destination": "Quebec City",
+    "purpose": "Workshop",
+    "totalUsd": 512.8199999999999
+  },
+  {
+    "id": 15,
+    "date": "2026-08-25",
+    "destination": "Montreal",
+    "purpose": "Conference",
+    "totalUsd": 1552.8168
+  },
+  {
+    "id": 16,
+    "date": "2026-01-05",
+    "destination": "Ottawa",
+    "purpose": "Conference",
+    "totalUsd": 1983.1536
+  },
+  {
+    "id": 17,
+    "date": "2026-02-12",
+    "destination": "Montreal",
+    "purpose": "Research",
+    "totalUsd": 702.8352
+  },
+  {
+    "id": 18,
+    "date": "2026-03-19",
+    "destination": "Quebec City",
+    "purpose": "Training",
+    "totalUsd": 907.3152
+  },
+  {
+    "id": 19,
+    "date": "2026-04-26",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 1642.7592
+  },
+  {
+    "id": 20,
+    "date": "2026-05-06",
+    "destination": "Montreal",
+    "purpose": "Workshop",
+    "totalUsd": 1494.5256
+  },
+  {
+    "id": 21,
+    "date": "2026-06-13",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 1111.5072
+  },
+  {
+    "id": 22,
+    "date": "2026-07-20",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 573.4151999999999
+  },
+  {
+    "id": 23,
+    "date": "2026-01-07",
+    "destination": "Toronto",
+    "purpose": "Meeting",
+    "totalUsd": 976.0247999999999
+  },
+  {
+    "id": 24,
+    "date": "2026-02-14",
+    "destination": "Montreal",
+    "purpose": "Training",
+    "totalUsd": 2111.3712
+  },
+  {
+    "id": 25,
+    "date": "2026-03-21",
+    "destination": "Quebec City",
+    "purpose": "Training",
+    "totalUsd": 1539.8999999999999
+  },
+  {
+    "id": 26,
+    "date": "2026-04-01",
+    "destination": "Halifax",
+    "purpose": "Research",
+    "totalUsd": 403.2288
+  },
+  {
+    "id": 27,
+    "date": "2026-05-08",
+    "destination": "Vancouver",
+    "purpose": "Training",
+    "totalUsd": 1738.4904000000001
+  },
+  {
+    "id": 28,
+    "date": "2026-06-15",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 1036.4976
+  },
+  {
+    "id": 29,
+    "date": "2026-07-22",
+    "destination": "Halifax",
+    "purpose": "Meeting",
+    "totalUsd": 572.7672
+  },
+  {
+    "id": 30,
+    "date": "2026-01-09",
+    "destination": "Montreal",
+    "purpose": "Training",
+    "totalUsd": 1477.8216
+  },
+  {
+    "id": 31,
+    "date": "2026-02-16",
+    "destination": "Halifax",
+    "purpose": "Workshop",
+    "totalUsd": 227.2824
+  },
+  {
+    "id": 32,
+    "date": "2026-03-23",
+    "destination": "Halifax",
+    "purpose": "Workshop",
+    "totalUsd": 2295.396
+  },
+  {
+    "id": 33,
+    "date": "2026-04-03",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 1995.264
+  },
+  {
+    "id": 34,
+    "date": "2026-05-10",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 1598.1624
+  },
+  {
+    "id": 35,
+    "date": "2026-06-17",
+    "destination": "Ottawa",
+    "purpose": "Meeting",
+    "totalUsd": 333.77759999999995
+  },
+  {
+    "id": 36,
+    "date": "2026-07-24",
+    "destination": "Halifax",
+    "purpose": "Training",
+    "totalUsd": 1092.5783999999999
+  },
+  {
+    "id": 37,
+    "date": "2026-08-04",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 1776.1248
+  },
+  {
+    "id": 38,
+    "date": "2026-01-11",
+    "destination": "Montreal",
+    "purpose": "Meeting",
+    "totalUsd": 1952.8848
+  },
+  {
+    "id": 39,
+    "date": "2026-02-18",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 915.5880000000001
+  },
+  {
+    "id": 40,
+    "date": "2026-03-25",
+    "destination": "Vancouver",
+    "purpose": "Workshop",
+    "totalUsd": 2200.8816
+  },
+  {
+    "id": 41,
+    "date": "2026-04-05",
+    "destination": "Toronto",
+    "purpose": "Workshop",
+    "totalUsd": 805.248
+  },
+  {
+    "id": 42,
+    "date": "2026-05-12",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 2146.7664
+  },
+  {
+    "id": 43,
+    "date": "2026-06-19",
+    "destination": "Ottawa",
+    "purpose": "Training",
+    "totalUsd": 214.8552
+  },
+  {
+    "id": 44,
+    "date": "2026-01-13",
+    "destination": "Vancouver",
+    "purpose": "Research",
+    "totalUsd": 2186.1288
+  },
+  {
+    "id": 45,
+    "date": "2026-02-20",
+    "destination": "Vancouver",
+    "purpose": "Meeting",
+    "totalUsd": 1256.5728
+  },
+  {
+    "id": 46,
+    "date": "2026-03-27",
+    "destination": "Halifax",
+    "purpose": "Training",
+    "totalUsd": 2146.356
+  },
+  {
+    "id": 47,
+    "date": "2026-04-07",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 971.2080000000001
+  },
+  {
+    "id": 48,
+    "date": "2026-05-14",
+    "destination": "Quebec City",
+    "purpose": "Research",
+    "totalUsd": 2081.3831999999998
+  },
+  {
+    "id": 49,
+    "date": "2026-06-21",
+    "destination": "Winnipeg",
+    "purpose": "Conference",
+    "totalUsd": 636.156
+  },
+  {
+    "id": 50,
+    "date": "2026-07-01",
+    "destination": "Montreal",
+    "purpose": "Meeting",
+    "totalUsd": 133.0488
+  },
+  {
+    "id": 51,
+    "date": "2026-08-08",
+    "destination": "Calgary",
+    "purpose": "Workshop",
+    "totalUsd": 574.7543999999999
+  },
+  {
+    "id": 52,
+    "date": "2026-01-15",
+    "destination": "Montreal",
+    "purpose": "Conference",
+    "totalUsd": 594.1007999999999
+  },
+  {
+    "id": 53,
+    "date": "2026-02-22",
+    "destination": "Toronto",
+    "purpose": "Meeting",
+    "totalUsd": 243.5328
+  },
+  {
+    "id": 54,
+    "date": "2026-03-02",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 1569.9239999999998
+  },
+  {
+    "id": 55,
+    "date": "2026-04-09",
+    "destination": "Calgary",
+    "purpose": "Workshop",
+    "totalUsd": 379.8144
+  },
+  {
+    "id": 56,
+    "date": "2026-05-16",
+    "destination": "Winnipeg",
+    "purpose": "Training",
+    "totalUsd": 1826.3736000000001
+  },
+  {
+    "id": 57,
+    "date": "2026-06-23",
+    "destination": "Halifax",
+    "purpose": "Training",
+    "totalUsd": 295.57439999999997
+  },
+  {
+    "id": 58,
+    "date": "2026-08-10",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 220.8168
+  },
+  {
+    "id": 59,
+    "date": "2026-01-17",
+    "destination": "Quebec City",
+    "purpose": "Conference",
+    "totalUsd": 637.8192
+  },
+  {
+    "id": 60,
+    "date": "2026-02-24",
+    "destination": "Calgary",
+    "purpose": "Workshop",
+    "totalUsd": 1081.2456
+  },
+  {
+    "id": 61,
+    "date": "2026-03-04",
+    "destination": "Halifax",
+    "purpose": "Training",
+    "totalUsd": 704.1024
+  },
+  {
+    "id": 62,
+    "date": "2026-04-11",
+    "destination": "Calgary",
+    "purpose": "Conference",
+    "totalUsd": 1069.0847999999999
+  },
+  {
+    "id": 63,
+    "date": "2026-05-18",
+    "destination": "Montreal",
+    "purpose": "Conference",
+    "totalUsd": 1532.5992
+  },
+  {
+    "id": 64,
+    "date": "2026-07-05",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 987.6672
+  },
+  {
+    "id": 65,
+    "date": "2026-08-12",
+    "destination": "Winnipeg",
+    "purpose": "Training",
+    "totalUsd": 2003.8464
+  },
+  {
+    "id": 66,
+    "date": "2026-01-19",
+    "destination": "Toronto",
+    "purpose": "Training",
+    "totalUsd": 926.8127999999999
+  },
+  {
+    "id": 67,
+    "date": "2026-02-26",
+    "destination": "Halifax",
+    "purpose": "Meeting",
+    "totalUsd": 2141.0496
+  },
+  {
+    "id": 68,
+    "date": "2026-03-06",
+    "destination": "Winnipeg",
+    "purpose": "Meeting",
+    "totalUsd": 1024.4591999999998
+  },
+  {
+    "id": 69,
+    "date": "2026-04-13",
+    "destination": "Winnipeg",
+    "purpose": "Training",
+    "totalUsd": 507.52079999999995
+  },
+  {
+    "id": 70,
+    "date": "2026-05-20",
+    "destination": "Calgary",
+    "purpose": "Conference",
+    "totalUsd": 1370.7936
+  },
+  {
+    "id": 71,
+    "date": "2026-06-27",
+    "destination": "Toronto",
+    "purpose": "Meeting",
+    "totalUsd": 213.1704
+  },
+  {
+    "id": 72,
+    "date": "2026-07-07",
+    "destination": "Winnipeg",
+    "purpose": "Workshop",
+    "totalUsd": 2125.2312
+  },
+  {
+    "id": 73,
+    "date": "2026-08-14",
+    "destination": "Vancouver",
+    "purpose": "Conference",
+    "totalUsd": 2217.024
+  },
+  {
+    "id": 74,
+    "date": "2026-01-21",
+    "destination": "Montreal",
+    "purpose": "Training",
+    "totalUsd": 238.356
+  },
+  {
+    "id": 75,
+    "date": "2026-02-01",
+    "destination": "Montreal",
+    "purpose": "Training",
+    "totalUsd": 981.8136000000001
+  },
+  {
+    "id": 76,
+    "date": "2026-03-08",
+    "destination": "Calgary",
+    "purpose": "Workshop",
+    "totalUsd": 1404.8064
+  },
+  {
+    "id": 77,
+    "date": "2026-04-15",
+    "destination": "Montreal",
+    "purpose": "Research",
+    "totalUsd": 1544.1912
+  },
+  {
+    "id": 78,
+    "date": "2026-05-22",
+    "destination": "Quebec City",
+    "purpose": "Meeting",
+    "totalUsd": 539.3664
+  },
+  {
+    "id": 79,
+    "date": "2026-06-02",
+    "destination": "Quebec City",
+    "purpose": "Training",
+    "totalUsd": 675.4248
+  },
+  {
+    "id": 80,
+    "date": "2026-07-09",
+    "destination": "Vancouver",
+    "purpose": "Meeting",
+    "totalUsd": 1100.34
+  },
+  {
+    "id": 81,
+    "date": "2026-08-16",
+    "destination": "Montreal",
+    "purpose": "Conference",
+    "totalUsd": 1102.6943999999999
+  },
+  {
+    "id": 82,
+    "date": "2026-01-23",
+    "destination": "Montreal",
+    "purpose": "Conference",
+    "totalUsd": 1278.6552
+  },
+  {
+    "id": 83,
+    "date": "2026-02-03",
+    "destination": "Ottawa",
+    "purpose": "Training",
+    "totalUsd": 2155.9968
+  },
+  {
+    "id": 84,
+    "date": "2026-03-10",
+    "destination": "Montreal",
+    "purpose": "Training",
+    "totalUsd": 905.8608
+  },
+  {
+    "id": 85,
+    "date": "2026-04-17",
+    "destination": "Vancouver",
+    "purpose": "Research",
+    "totalUsd": 1935.3095999999998
+  },
+  {
+    "id": 86,
+    "date": "2026-08-18",
+    "destination": "Montreal",
+    "purpose": "Workshop",
+    "totalUsd": 431.12159999999994
+  },
+  {
+    "id": 87,
+    "date": "2026-01-25",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 553.4928
+  },
+  {
+    "id": 88,
+    "date": "2026-02-05",
+    "destination": "Quebec City",
+    "purpose": "Training",
+    "totalUsd": 1610.9927999999998
+  },
+  {
+    "id": 89,
+    "date": "2026-03-12",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 1169.7696
+  },
+  {
+    "id": 90,
+    "date": "2026-04-19",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 1492.992
+  },
+  {
+    "id": 91,
+    "date": "2026-05-26",
+    "destination": "Ottawa",
+    "purpose": "Conference",
+    "totalUsd": 94.26239999999999
+  },
+  {
+    "id": 92,
+    "date": "2026-06-06",
+    "destination": "Vancouver",
+    "purpose": "Meeting",
+    "totalUsd": 444.72239999999994
+  },
+  {
+    "id": 93,
+    "date": "2026-07-13",
+    "destination": "Winnipeg",
+    "purpose": "Workshop",
+    "totalUsd": 1651.2912
+  },
+  {
+    "id": 94,
+    "date": "2026-08-20",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 253.26
+  },
+  {
+    "id": 95,
+    "date": "2026-01-27",
+    "destination": "Vancouver",
+    "purpose": "Workshop",
+    "totalUsd": 166.2984
+  },
+  {
+    "id": 96,
+    "date": "2026-02-07",
+    "destination": "Quebec City",
+    "purpose": "Workshop",
+    "totalUsd": 1311.6816
+  },
+  {
+    "id": 97,
+    "date": "2026-03-14",
+    "destination": "Halifax",
+    "purpose": "Training",
+    "totalUsd": 179.1576
+  },
+  {
+    "id": 98,
+    "date": "2026-04-21",
+    "destination": "Quebec City",
+    "purpose": "Conference",
+    "totalUsd": 2079.8568
+  },
+  {
+    "id": 99,
+    "date": "2026-05-01",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 1565.388
+  },
+  {
+    "id": 100,
+    "date": "2026-06-08",
+    "destination": "Quebec City",
+    "purpose": "Workshop",
+    "totalUsd": 2047.0536
+  },
+  {
+    "id": 101,
+    "date": "2026-07-15",
+    "destination": "Halifax",
+    "purpose": "Workshop",
+    "totalUsd": 1748.4407999999999
+  },
+  {
+    "id": 102,
+    "date": "2026-08-22",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 2251.2311999999997
+  },
+  {
+    "id": 103,
+    "date": "2026-01-02",
+    "destination": "Vancouver",
+    "purpose": "Research",
+    "totalUsd": 141.3648
+  },
+  {
+    "id": 104,
+    "date": "2026-02-09",
+    "destination": "Quebec City",
+    "purpose": "Research",
+    "totalUsd": 1865.4336
+  },
+  {
+    "id": 105,
+    "date": "2026-03-16",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 439.43760000000003
+  },
+  {
+    "id": 106,
+    "date": "2026-05-03",
+    "destination": "Winnipeg",
+    "purpose": "Training",
+    "totalUsd": 528.9695999999999
+  },
+  {
+    "id": 107,
+    "date": "2026-06-10",
+    "destination": "Winnipeg",
+    "purpose": "Meeting",
+    "totalUsd": 763.1928
+  },
+  {
+    "id": 108,
+    "date": "2026-07-17",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 138.8808
+  },
+  {
+    "id": 109,
+    "date": "2026-08-24",
+    "destination": "Calgary",
+    "purpose": "Research",
+    "totalUsd": 814.3559999999999
+  },
+  {
+    "id": 110,
+    "date": "2026-01-04",
+    "destination": "Montreal",
+    "purpose": "Meeting",
+    "totalUsd": 865.1016
+  },
+  {
+    "id": 111,
+    "date": "2026-02-11",
+    "destination": "Halifax",
+    "purpose": "Workshop",
+    "totalUsd": 820.7568
+  },
+  {
+    "id": 112,
+    "date": "2026-03-18",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 2031.3216
+  },
+  {
+    "id": 113,
+    "date": "2026-04-25",
+    "destination": "Ottawa",
+    "purpose": "Training",
+    "totalUsd": 1373.9184
+  },
+  {
+    "id": 114,
+    "date": "2026-06-12",
+    "destination": "Quebec City",
+    "purpose": "Research",
+    "totalUsd": 1430.7263999999998
+  },
+  {
+    "id": 115,
+    "date": "2026-07-19",
+    "destination": "Montreal",
+    "purpose": "Research",
+    "totalUsd": 2081.1384
+  },
+  {
+    "id": 116,
+    "date": "2026-08-26",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 184.83119999999997
+  },
+  {
+    "id": 117,
+    "date": "2026-01-06",
+    "destination": "Halifax",
+    "purpose": "Conference",
+    "totalUsd": 1239.3719999999998
+  },
+  {
+    "id": 118,
+    "date": "2026-02-13",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 1042.848
+  },
+  {
+    "id": 119,
+    "date": "2026-03-20",
+    "destination": "Quebec City",
+    "purpose": "Workshop",
+    "totalUsd": 782.5391999999999
+  },
+  {
+    "id": 120,
+    "date": "2026-04-27",
+    "destination": "Montreal",
+    "purpose": "Meeting",
+    "totalUsd": 1210.9968
+  },
+  {
+    "id": 121,
+    "date": "2026-05-07",
+    "destination": "Halifax",
+    "purpose": "Meeting",
+    "totalUsd": 978.7608
+  },
+  {
+    "id": 122,
+    "date": "2026-06-14",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 368.67599999999993
+  },
+  {
+    "id": 123,
+    "date": "2026-07-21",
+    "destination": "Halifax",
+    "purpose": "Research",
+    "totalUsd": 1588.4207999999999
+  },
+  {
+    "id": 124,
+    "date": "2026-08-01",
+    "destination": "Vancouver",
+    "purpose": "Workshop",
+    "totalUsd": 1348.4448
+  },
+  {
+    "id": 125,
+    "date": "2026-01-08",
+    "destination": "Halifax",
+    "purpose": "Workshop",
+    "totalUsd": 1935.2663999999997
+  },
+  {
+    "id": 126,
+    "date": "2026-02-15",
+    "destination": "Ottawa",
+    "purpose": "Meeting",
+    "totalUsd": 552.4992
+  },
+  {
+    "id": 127,
+    "date": "2026-04-02",
+    "destination": "Calgary",
+    "purpose": "Workshop",
+    "totalUsd": 1135.7352
+  },
+  {
+    "id": 128,
+    "date": "2026-05-09",
+    "destination": "Vancouver",
+    "purpose": "Conference",
+    "totalUsd": 715.7231999999999
+  },
+  {
+    "id": 129,
+    "date": "2026-07-23",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 584.5608
+  },
+  {
+    "id": 130,
+    "date": "2026-08-03",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 140.5656
+  },
+  {
+    "id": 131,
+    "date": "2026-01-10",
+    "destination": "Calgary",
+    "purpose": "Research",
+    "totalUsd": 1441.9584
+  },
+  {
+    "id": 132,
+    "date": "2026-02-17",
+    "destination": "Montreal",
+    "purpose": "Research",
+    "totalUsd": 1005.4656
+  },
+  {
+    "id": 133,
+    "date": "2026-03-24",
+    "destination": "Calgary",
+    "purpose": "Research",
+    "totalUsd": 1182.7296
+  },
+  {
+    "id": 134,
+    "date": "2026-04-04",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 1541.2751999999998
+  },
+  {
+    "id": 135,
+    "date": "2026-05-11",
+    "destination": "Toronto",
+    "purpose": "Conference",
+    "totalUsd": 1812.6216000000002
+  },
+  {
+    "id": 136,
+    "date": "2026-06-18",
+    "destination": "Calgary",
+    "purpose": "Training",
+    "totalUsd": 1869.5951999999997
+  },
+  {
+    "id": 137,
+    "date": "2026-07-25",
+    "destination": "Winnipeg",
+    "purpose": "Conference",
+    "totalUsd": 1322.5031999999999
+  },
+  {
+    "id": 138,
+    "date": "2026-08-05",
+    "destination": "Montreal",
+    "purpose": "Research",
+    "totalUsd": 382.08959999999996
+  },
+  {
+    "id": 139,
+    "date": "2026-01-12",
+    "destination": "Winnipeg",
+    "purpose": "Workshop",
+    "totalUsd": 2277.1512
+  },
+  {
+    "id": 140,
+    "date": "2026-02-19",
+    "destination": "Quebec City",
+    "purpose": "Research",
+    "totalUsd": 1445.0184
+  },
+  {
+    "id": 141,
+    "date": "2026-03-26",
+    "destination": "Halifax",
+    "purpose": "Workshop",
+    "totalUsd": 1075.2552
+  },
+  {
+    "id": 142,
+    "date": "2026-05-13",
+    "destination": "Ottawa",
+    "purpose": "Workshop",
+    "totalUsd": 1161.0431999999998
+  },
+  {
+    "id": 143,
+    "date": "2026-06-20",
+    "destination": "Calgary",
+    "purpose": "Meeting",
+    "totalUsd": 1061.8632
+  },
+  {
+    "id": 144,
+    "date": "2026-07-27",
+    "destination": "Ottawa",
+    "purpose": "Training",
+    "totalUsd": 688.9535999999999
+  },
+  {
+    "id": 145,
+    "date": "2026-08-07",
+    "destination": "Quebec City",
+    "purpose": "Workshop",
+    "totalUsd": 265.0896
+  }
+]
